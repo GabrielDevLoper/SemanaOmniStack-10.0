@@ -1,11 +1,10 @@
 const { Router } = require('express');
+const DevController = require('./controllers/DevController');
 
 const routes = Router();
 
 
-routes.post('/usuarios', (req, res) =>{
-    console.log(req.body);
-    return res.json({message:"hello omnistack"});
-});
+ routes.post('/addDevs', DevController.store);
 
+  
 module.exports = routes;
